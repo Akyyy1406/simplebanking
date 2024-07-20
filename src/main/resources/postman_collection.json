@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "7bafe83d-1e5c-4bd6-bb2a-9c543d3d930a",
+		"name": "simplebanking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31756228"
+	},
+	"item": [
+		{
+			"name": "Account Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner\": \"Aky\",\n    \"accountNumber\": \"123456\",\n    \"balance\": 500.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/account/v1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/account/v1/669-7788"
+			},
+			"response": []
+		},
+		{
+			"name": "Credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"DEPOSIT\",\r\n    \"amount\": 10000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/account/v1/credit/669-7788"
+			},
+			"response": []
+		},
+		{
+			"name": "Debit Bill",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "tr"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkbUxHVFhCOGQ1d1kxYzR6T0o1U21ScHJYVzgyUnlPNmJlSk02Z1hyZjE0In0.eyJleHAiOjE3MjE3MjE1MjcsImlhdCI6MTcyMTExNjcyNywianRpIjoiM2Q2ZmYwNDEtMjcyOS00Zjk4LTlkOWUtMzUyMWI5ZjMzYjAyIiwiaXNzIjoiaHR0cDovL2tleWNsb2FrLnNicy1kZXYuZ292LmN0LnRyL3JlYWxtcy9TYnMiLCJzdWIiOiI3MjU1Y2ZmOC1mZGQ5LTQyZGItOTY2OC02OTNkYjA3ZWM2NjQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzYnMtZXh0ZXJuYWwtY2xpZW50Iiwic2Vzc2lvbl9zdGF0ZSI6IjIwZGFhMTIxLTVjNDEtNDg4Yy04ODk1LTM1ZTMxMThjZGI1YSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiKiJdLCJyZXNvdXJjZV9hY2Nlc3MiOnsic2JzLWV4dGVybmFsLWNsaWVudCI6eyJyb2xlcyI6WyJrc2tzX3ZhdGFuZGFzIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwic2lkIjoiMjBkYWExMjEtNWM0MS00ODhjLTg4OTUtMzVlMzExOGNkYjVhIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiS1NLUyBWQVRBTkRBUyIsInByZWZlcnJlZF91c2VybmFtZSI6IjIwMjAwMCIsImdpdmVuX25hbWUiOiJLU0tTIiwiZmFtaWx5X25hbWUiOiJWQVRBTkRBUyIsImVtYWlsIjoia3Nrc3ZhdGFuZGFAZ21haWwuY29tIn0.lpKBF48q4-dzUulf-OMJqfphy9Bx2A3jFlJVUzCxKE1gBORowyFk9p1GvfQTVjoBzt88jmGPywuYsvbHfXQq4p273LPEiwzrgYptZow6JP8HcHZyvnEEOuLhieZzbYxW_9W3iUsUz-PZSGKpMa3dfTJYtxzQQURUp44r7jB5n712OOmTgucGZmqSrzNfEipradJVFFJXwYf7CsRzdZNtHAkLprpHPTNWesrKQf5cZ-uGQla0zJRrw6IU5I1WyVeZRtcLUQqP0i0e4jPQmSEyaTpa_wZqBUWa4AYgyNtJfLz-YJT7cHE_E_-dbGtu9V4XeCuuSg3iTi0bLIDDh_Gklw"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "http://localhost:3000"
+					},
+					{
+						"key": "Referer",
+						"value": "http://localhost:3000/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payee\":\"vodafone\",\r\n    \"phoneNumber\":\"505050\",\r\n    \"type\":\"BILL\",\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/account/v1/debit/669-7788"
+			},
+			"response": []
+		},
+		{
+			"name": "Debit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"WITHDRAWAL\",\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/account/v1/debit/669-7788"
+			},
+			"response": []
+		},
+		{
+			"name": "Credit Salary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\":\"SALARY\",\r\n    \"company\":\"X\",\r\n    \"amount\": 100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/account/v1/credit/669-7788"
+			},
+			"response": []
+		}
+	]
+}
